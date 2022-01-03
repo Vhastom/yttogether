@@ -1,0 +1,429 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <variables>
+    <variable id="OZ0l|^XRQH?T?s;b$B%X">arguments</variable>
+    <variable id="dN-GQox{6nqmX%so5NT^">command</variable>
+  </variables>
+  <block type="s4d_login" id="{|lO_b-0fA9`}/b6#m6T" x="62" y="12">
+    <value name="TOKEN">
+      <block type="text" id="T3=]`vNu7E~Pv%]r^%YC">
+        <field name="TEXT">ODk3ODUxNTQ0MTIzMzU1MTM3.YWbraQ.zv4dUdeML3Gz0fKTTuumaH0yNZI</field>
+      </block>
+    </value>
+  </block>
+  <block type="s4d_on_message" id="+Q@qA4DZ.)H0dU~:qJFA" x="141" y="92">
+    <statement name="STATEMENTS">
+      <block type="variables_set" id="Fo+ksP#~73~o,EeQmq{u">
+        <field name="VAR" id="OZ0l|^XRQH?T?s;b$B%X">arguments</field>
+        <value name="VALUE">
+          <block type="lists_split" id="1YzV9Eu2@GGwP5RREIIR">
+            <mutation mode="SPLIT"></mutation>
+            <field name="MODE">SPLIT</field>
+            <value name="INPUT">
+              <block type="s4d_message_content" id="E#m(;pB|W+d+AtJCc{5e"></block>
+            </value>
+            <value name="DELIM">
+              <shadow type="text" id="Z.|mO+X9gt-/BR;jjMkI">
+                <field name="TEXT"> </field>
+              </shadow>
+            </value>
+          </block>
+        </value>
+        <next>
+          <block type="variables_set" id="U^i0Ox!/+F6x[NrTqTpR">
+            <field name="VAR" id="dN-GQox{6nqmX%so5NT^">command</field>
+            <value name="VALUE">
+              <block type="lists_getIndex" id="9ul#e70.^`!G^_~-BlK~">
+                <mutation statement="false" at="true"></mutation>
+                <field name="MODE">GET_REMOVE</field>
+                <field name="WHERE">FROM_START</field>
+                <value name="VALUE">
+                  <block type="variables_get" id="z-Mavm-5KXE/Y;G)]0%i">
+                    <field name="VAR" id="OZ0l|^XRQH?T?s;b$B%X">arguments</field>
+                  </block>
+                </value>
+                <value name="AT">
+                  <block type="math_number" id="n6Es1J;;TYupl;g]g)Eg">
+                    <field name="NUM">1</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <next>
+              <block type="controls_if" id="3XA36VU);D_1N5vf9p(Z">
+                <mutation elseif="7"></mutation>
+                <value name="IF0">
+                  <block type="logic_compare" id="1igBlMs)G_=BaFXSd3rc">
+                    <field name="OP">EQ</field>
+                    <value name="A">
+                      <block type="variables_get" id="764~nc#(*|4bhyY/,K{h">
+                        <field name="VAR" id="dN-GQox{6nqmX%so5NT^">command</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="text" id="[P2gt2r%QKJF3|~Q$E~+">
+                        <field name="TEXT">&gt;youtube</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <statement name="DO0">
+                  <block type="s4d_try_and_catch" id="tI~((.4#]O),Pwmleap?">
+                    <statement name="try">
+                      <block type="create_together" id="Db|Vj*4ZS`[Cm%#BGZYT">
+                        <field name="INFO">youtube</field>
+                        <value name="VoiceChannel">
+                          <block type="vc_channel" id="uW=,.wq`%hg4)@zoHRco"></block>
+                        </value>
+                        <statement name="THEN">
+                          <block type="s4d_reply" id="HN5d*!dZ*_U8GoKRfL#X">
+                            <value name="CONTENT">
+                              <shadow type="text" id="1b:}fw3mEn04*Q$P%q$1">
+                                <field name="TEXT">Hey!</field>
+                              </shadow>
+                              <block type="invite_code" id="V-!E.(_U2x!=PaoGHqh~"></block>
+                            </value>
+                          </block>
+                        </statement>
+                      </block>
+                    </statement>
+                    <statement name="catch">
+                      <block type="s4d_reply" id="~s3tYSGX!BT48iyirdrn">
+                        <value name="CONTENT">
+                          <shadow type="text" id="Oj13d?ju=;@~@*H-Y-hF">
+                            <field name="TEXT">You are not in voice channel!</field>
+                          </shadow>
+                        </value>
+                      </block>
+                    </statement>
+                  </block>
+                </statement>
+                <value name="IF1">
+                  <block type="logic_compare" id="fp%HNdqv!fvOt3VXoim{">
+                    <field name="OP">EQ</field>
+                    <value name="A">
+                      <block type="variables_get" id="b:=tfF6G7kGyC434V+bk">
+                        <field name="VAR" id="dN-GQox{6nqmX%so5NT^">command</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="text" id="vVzv:T.nEHUaM/7mN_,j">
+                        <field name="TEXT">&gt;poker</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <statement name="DO1">
+                  <block type="s4d_try_and_catch" id="1+qbA6aTpBqmQA{}|T(S">
+                    <statement name="try">
+                      <block type="create_together" id="-|Y2ak8!,iPl-7ct*%j?">
+                        <field name="INFO">poker</field>
+                        <value name="VoiceChannel">
+                          <block type="vc_channel" id="TLuuL}oA!a3g$]jNEw#w"></block>
+                        </value>
+                        <statement name="THEN">
+                          <block type="s4d_reply" id="O:Dbsl=,C-$/j}oFp:uo">
+                            <value name="CONTENT">
+                              <shadow type="text">
+                                <field name="TEXT">Hey!</field>
+                              </shadow>
+                              <block type="invite_code" id="mq3mBzdnnQnQ#A4u:@7b"></block>
+                            </value>
+                          </block>
+                        </statement>
+                      </block>
+                    </statement>
+                    <statement name="catch">
+                      <block type="s4d_reply" id="7EQ@|Zk$Z2/8!st(hb|y">
+                        <value name="CONTENT">
+                          <shadow type="text" id="Qxjr#G`(;/a:~6PLB.px">
+                            <field name="TEXT">You are not in voice channel!</field>
+                          </shadow>
+                        </value>
+                      </block>
+                    </statement>
+                  </block>
+                </statement>
+                <value name="IF2">
+                  <block type="logic_compare" id="ea8(B9{lfBb}4cnAWn(V">
+                    <field name="OP">EQ</field>
+                    <value name="A">
+                      <block type="variables_get" id="JY3e{}#/q%a{Q?ek)DX0">
+                        <field name="VAR" id="dN-GQox{6nqmX%so5NT^">command</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="text" id="[oZK,Uk]ZfdpP(kP#RZ}">
+                        <field name="TEXT">&gt;chess</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <statement name="DO2">
+                  <block type="s4d_try_and_catch" id="%zU.j9EcclDb)WP:@Yx2">
+                    <statement name="try">
+                      <block type="create_together" id="eX*N|2hl]s;I#@1HO2=T">
+                        <field name="INFO">chess</field>
+                        <value name="VoiceChannel">
+                          <block type="vc_channel" id="@7/A?kKx}(X#9+[vAf`e"></block>
+                        </value>
+                        <statement name="THEN">
+                          <block type="s4d_reply" id="Eoxd9v!`piv{M@p2Fa!9">
+                            <value name="CONTENT">
+                              <shadow type="text">
+                                <field name="TEXT">Hey!</field>
+                              </shadow>
+                              <block type="invite_code" id="rt.HQuDY[rew3Wa_@qej"></block>
+                            </value>
+                          </block>
+                        </statement>
+                      </block>
+                    </statement>
+                    <statement name="catch">
+                      <block type="s4d_reply" id="eNYS]j9k0+TI={[GJ22)">
+                        <value name="CONTENT">
+                          <shadow type="text" id="I2YJ#P9AxCk@.b|riTd,">
+                            <field name="TEXT">You are not in voice channel!</field>
+                          </shadow>
+                        </value>
+                      </block>
+                    </statement>
+                  </block>
+                </statement>
+                <value name="IF3">
+                  <block type="logic_compare" id="^WAK#eAVvJCBkir2!W5:">
+                    <field name="OP">EQ</field>
+                    <value name="A">
+                      <block type="variables_get" id="qhC#$@53dJ{OREO8Q[,b">
+                        <field name="VAR" id="dN-GQox{6nqmX%so5NT^">command</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="text" id="~*w[46u+1cnxnUNaeLK;">
+                        <field name="TEXT">&gt;betrayal</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <statement name="DO3">
+                  <block type="s4d_try_and_catch" id="crpp-hB0puk=Fk;*8%hF">
+                    <statement name="try">
+                      <block type="create_together" id="Yte`g0v/u}Cyjf(FpNYJ">
+                        <field name="INFO">betrayal</field>
+                        <value name="VoiceChannel">
+                          <block type="vc_channel" id="-`q8q!meTYN3uYcL1cjZ"></block>
+                        </value>
+                        <statement name="THEN">
+                          <block type="s4d_reply" id="|9pO=M;)c7D$pHu}hy-S">
+                            <value name="CONTENT">
+                              <shadow type="text">
+                                <field name="TEXT">Hey!</field>
+                              </shadow>
+                              <block type="invite_code" id="D,te7*a*jy%PSJu[,|X*"></block>
+                            </value>
+                          </block>
+                        </statement>
+                      </block>
+                    </statement>
+                    <statement name="catch">
+                      <block type="s4d_reply" id="bhd3f=0Z2r(6xj?Q4snv">
+                        <value name="CONTENT">
+                          <shadow type="text" id="[+oOHGv?$G*rzfxLpo6R">
+                            <field name="TEXT">You are not in voice channel!</field>
+                          </shadow>
+                        </value>
+                      </block>
+                    </statement>
+                  </block>
+                </statement>
+                <value name="IF4">
+                  <block type="logic_compare" id="S$gQN8eIHJGeK]5;5#z8">
+                    <field name="OP">EQ</field>
+                    <value name="A">
+                      <block type="variables_get" id=".NddZi_CddlCLo-Y*?6t">
+                        <field name="VAR" id="dN-GQox{6nqmX%so5NT^">command</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="text" id=")9q$w.[d,)=By)lRUT,%">
+                        <field name="TEXT">&gt;fishing</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <statement name="DO4">
+                  <block type="s4d_try_and_catch" id="=AF/#.#@%O6wRw57?452">
+                    <statement name="try">
+                      <block type="create_together" id="rdof[sl=$D,3N6U*:~!Q">
+                        <field name="INFO">fishing</field>
+                        <value name="VoiceChannel">
+                          <block type="vc_channel" id="}+0~P{F$n2;+kt-la[8-"></block>
+                        </value>
+                        <statement name="THEN">
+                          <block type="s4d_reply" id="fA};^nle|u#FO1=h2SE4">
+                            <value name="CONTENT">
+                              <shadow type="text">
+                                <field name="TEXT">Hey!</field>
+                              </shadow>
+                              <block type="invite_code" id="x^3q+{T%g?bg$X+oP6g)"></block>
+                            </value>
+                          </block>
+                        </statement>
+                      </block>
+                    </statement>
+                    <statement name="catch">
+                      <block type="s4d_reply" id="Vz~.LOKCAX:IpXFEy6]i">
+                        <value name="CONTENT">
+                          <shadow type="text" id="Ph^UKL3mkzxyBGZbXDO.">
+                            <field name="TEXT">You are not in voice channel!</field>
+                          </shadow>
+                        </value>
+                      </block>
+                    </statement>
+                  </block>
+                </statement>
+                <value name="IF5">
+                  <block type="logic_compare" id="xq_MT~oUxY0vQ%=(Bp_)">
+                    <field name="OP">EQ</field>
+                    <value name="A">
+                      <block type="variables_get" id="|nM-@PHn-H=m=e^oa}_g">
+                        <field name="VAR" id="dN-GQox{6nqmX%so5NT^">command</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="text" id="Q/6{rngba{S9Y0[GOS?3">
+                        <field name="TEXT">&gt;lettertile</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <statement name="DO5">
+                  <block type="s4d_try_and_catch" id="K9p(#7d#p`M6y5(KZTGp">
+                    <statement name="try">
+                      <block type="create_together" id="c4{BJO2ZPcv|Z-f?4vp^">
+                        <field name="INFO">lettertile</field>
+                        <value name="VoiceChannel">
+                          <block type="vc_channel" id="SpWExoS%4aG$[$Hktra8"></block>
+                        </value>
+                        <statement name="THEN">
+                          <block type="s4d_reply" id="!RfG1@-q9([!5$y.3`*~">
+                            <value name="CONTENT">
+                              <shadow type="text">
+                                <field name="TEXT">Hey!</field>
+                              </shadow>
+                              <block type="invite_code" id="fpcg6Ti;#3)d[#eH!8/W"></block>
+                            </value>
+                          </block>
+                        </statement>
+                      </block>
+                    </statement>
+                    <statement name="catch">
+                      <block type="s4d_reply" id="/v8P8f8}[JhXUh/SSU:q">
+                        <value name="CONTENT">
+                          <shadow type="text" id="2MJ0uyS-{n*sx[@H*d=P">
+                            <field name="TEXT">You are not in voice channel!</field>
+                          </shadow>
+                        </value>
+                      </block>
+                    </statement>
+                  </block>
+                </statement>
+                <value name="IF6">
+                  <block type="logic_compare" id="=P(*/Qtx-{r||Mk@!LJ-">
+                    <field name="OP">EQ</field>
+                    <value name="A">
+                      <block type="variables_get" id="zDu]+%fi*-Xy{3eMSJh%">
+                        <field name="VAR" id="dN-GQox{6nqmX%so5NT^">command</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="text" id="4NM/,0EKb8G(~G$x}`W/">
+                        <field name="TEXT">&gt;wordsnack</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <statement name="DO6">
+                  <block type="s4d_try_and_catch" id="i4]nw0WbqQ8,@Wbqnm[h">
+                    <statement name="try">
+                      <block type="create_together" id="TTI!eg:k7*+w036]SBe3">
+                        <field name="INFO">wordsnack</field>
+                        <value name="VoiceChannel">
+                          <block type="vc_channel" id="6!,zhHL(}]aJg||Xk364"></block>
+                        </value>
+                        <statement name="THEN">
+                          <block type="s4d_reply" id="BWW2tXY#f:@]Fl:cbu(8">
+                            <value name="CONTENT">
+                              <shadow type="text">
+                                <field name="TEXT">Hey!</field>
+                              </shadow>
+                              <block type="invite_code" id="E[Vot{q^^T01eZzI=3=r"></block>
+                            </value>
+                          </block>
+                        </statement>
+                      </block>
+                    </statement>
+                    <statement name="catch">
+                      <block type="s4d_reply" id="w{K55/ei,V8Kvk)WDtLs">
+                        <value name="CONTENT">
+                          <shadow type="text" id="]@SD!MQ/6RU?u6P%aH(@">
+                            <field name="TEXT">You are not in voice channel!</field>
+                          </shadow>
+                        </value>
+                      </block>
+                    </statement>
+                  </block>
+                </statement>
+                <value name="IF7">
+                  <block type="logic_compare" id="n4u;G$,J3izFY2Md*n:x">
+                    <field name="OP">EQ</field>
+                    <value name="A">
+                      <block type="variables_get" id="T9F]S5-_-pdk-*E;qkQy">
+                        <field name="VAR" id="dN-GQox{6nqmX%so5NT^">command</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="text" id="Nl?}gdD~j88Mg?|SGqgw">
+                        <field name="TEXT">&gt;doodlecrew</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <statement name="DO7">
+                  <block type="s4d_try_and_catch" id="F6N8%i*_);H:T@QhoLNK">
+                    <statement name="try">
+                      <block type="create_together" id="%,=8iYfaO3/:(%agY?WZ">
+                        <field name="INFO">doodlecrew</field>
+                        <value name="VoiceChannel">
+                          <block type="vc_channel" id="gn(P$v|$dq)(b;`[3cMd"></block>
+                        </value>
+                        <statement name="THEN">
+                          <block type="s4d_reply" id="zM~$q~}yn.pz.RZLR6;t">
+                            <value name="CONTENT">
+                              <shadow type="text">
+                                <field name="TEXT">Hey!</field>
+                              </shadow>
+                              <block type="invite_code" id="t5~m~gy5Xef*/D90v;A="></block>
+                            </value>
+                          </block>
+                        </statement>
+                      </block>
+                    </statement>
+                    <statement name="catch">
+                      <block type="s4d_reply" id="~?rMk$6e+g*]9+WExtQ+">
+                        <value name="CONTENT">
+                          <shadow type="text" id="!q/PpHT|=M$(.[gf8%!l">
+                            <field name="TEXT">You are not in voice channel!</field>
+                          </shadow>
+                        </value>
+                      </block>
+                    </statement>
+                  </block>
+                </statement>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</xml>
